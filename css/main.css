@@ -135,6 +135,7 @@ body {
 /* * Header content* */
 
 .header__row {
+
   display: flex;
 }
 .header__img {
@@ -151,6 +152,8 @@ body {
 }
 
 .header__content {
+  position: relative;
+  z-index: 1;
   max-width: 592px;
   /* padding-left: 100px; */
 }
