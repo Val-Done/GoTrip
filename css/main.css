@@ -259,6 +259,8 @@ body {
 }
 
 .slider {
+  position: relative;
+  height: 456px;
 }
 .slider__item {
   margin-top: 27px;
@@ -279,7 +281,42 @@ body {
 /* активная картинка */
 .slider .center .slider__item {
   margin-top: 0px;
-
   width: 380px;
   height: 456px;
+}
+
+/* *Slider bottom * */
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  display: block;
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #8b8b8b;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.slider__btn--prev {
+  left: -27px;
+  padding-left: 26px;
+  justify-content: flex-start;
+}
+.slider__btn--next {
+  justify-content: flex-end;
+  right: -27px;
+  padding-right: 26px;
 }
