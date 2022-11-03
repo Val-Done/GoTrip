@@ -606,6 +606,12 @@ body {
   }
 }
 
+@media (max-width: 1200px) {
+  .destinations__slider {
+    width: 900px;
+  }
+}
+
 @media (max-width: 1000px) {
   .nav__list {
     display: none;
@@ -617,6 +623,9 @@ body {
 
   .nav__toggle {
     display: block;
+  }
+  .no-scroll {
+    overflow-y: hidden;
   }
   .nav--mobile {
     position: fixed;
@@ -639,7 +648,6 @@ body {
     align-items: center;
     row-gap: 40px;
     font-size: 22px;
-
   }
   .nav--mobile .nav__list a.active::after,
   .nav--mobile .nav__list a.hover::after {
@@ -652,12 +660,98 @@ body {
     align-items: center;
     row-gap: 40px;
     font-size: 22px;
-
   }
   .nav--mobile .nav__toggle {
     position: fixed;
     top: 50px;
     right: 50px;
   }
+  .header__img img {
+    right: -256px;
+  }
+  .header__img::after {
+    right: -300px;
+  }
+  .destinations__slider {
+    width: 600px;
+  }
+  .slider {
+    height: 304px;
+  }
+  .slider .slider__item {
+    margin-top: 18px;
+    width: 223px;
+    height: 268px;
+  }
+  .slider .center .slider__item {
+    margin-top: 0px;
+    width: 253px;
+    height: 304px;
+  }
 }
- 
+
+@media (max-width: 850px) {
+  .header {
+    padding-top: 20px;
+    min-height: unset;
+  }
+  .header__top {
+    margin-bottom: 40px;
+  }
+
+  .header__row {
+    flex-direction: column;
+  }
+  .header__img img {
+    position: static;
+    width: 70%;
+    height: auto;
+  }
+  .header__img::after {
+    top: 100px;
+    right: 0;
+  }
+  .header-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .header__text {
+    max-width: 400px;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+  .header__badge {
+    padding: 8px 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .header__btn {
+    padding: 20px 30px;
+    border-radius: 18px;
+    font-size: 20px;
+  }
+  .destinations__row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .destinations__slider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .nav--mobile .nav__toggle {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+  }
+  .nav--mobile .nav__list,
+  .nav--mobile .nav__login {
+    row-gap: 20px;
+  }
+}

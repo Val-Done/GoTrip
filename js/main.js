@@ -5,7 +5,28 @@ owl.owlCarousel({
   center: true,
   loop: true,
   margin: 30,
+  startPosition: 1,
   items: 3,
+
+  responsive: {
+    // breakpoint from 0 up
+    650: {
+      startPosition: 1,
+      items: 3,
+    },
+    // breakpoint from 480 up
+    850: {
+      startPosition: 1,
+      items: 2,
+    },
+    // breakpoint from 768 up
+    1000: {
+      margin: 20,
+    },
+    1200: {
+      margin: 30,
+    },
+  },
 });
 
 $(".slider__btn--prev").click(function () {
@@ -25,4 +46,5 @@ const menuIcon = document.querySelector(".menu-icon");
 navBtn.onclick = function () {
   nav.classList.toggle("nav--mobile");
   menuIcon.classList.toggle("menu-icon-active");
+  document.body.classList.toggle("no-scroll");
 };
