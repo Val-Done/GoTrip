@@ -296,6 +296,10 @@ body {
   width: 1110px;
   flex-shrink: 0;
 }
+.owl-item {
+  display: flex;
+  justify-content: center;
+}
 
 .slider {
   position: relative;
@@ -508,7 +512,7 @@ body {
 
 .subscribe-form {
   display: flex;
-  column-gap: 191px;
+  column-gap: 20px;
   padding: 12px 15px 12px 46px;
   max-width: 800px;
   min-height: 129px;
@@ -613,12 +617,18 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .nav__list {
+  .nav__list--header {
     display: none;
   }
 
-  .nav__login {
+  .nav__login--header {
     display: none;
+  }
+  .nav {
+    column-gap: 50px;
+  }
+  .nav__list {
+    column-gap: 50px;
   }
 
   .nav__toggle {
@@ -778,9 +788,168 @@ body {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
   }
+  /* customers */
+  .customers {
+    padding: 50px 0 60px;
+  }
+  .customers__content {
+    max-width: inherit;
+  }
+
+  .customers__row {
+    
+    column-gap: 30px;
+  }
+
+  .customers__title {
+    margin-bottom: 25px;
+    font-size: 35px;
+  }
+  
+  .review__client {
+    column-gap: 30px;
+    margin-bottom: 30px;
+  }
+  .review__client--avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .review__client--desc-name {
+    font-size: 23px;
+    margin-bottom: 5px;
+  }
+  .review__client--desc-country {
+    font-size: 18px;
+  }
+  .review__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .review__rating {
+    max-width: 200px;
+  }
+  .customers__img img {
+    max-width: 250px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+  /* cta */
+  .cta {
+    padding: 50px 0;
+  }
+  .cta__title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .cta__text {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .cta__plate {
+    min-height: 380px;
+    padding: 20px 15px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+
+  /* Subscribe */
+
+  .subscribe {
+    padding: 25px 0 30px;
+  }
+  .subscribe__title {
+    margin-bottom: 30px;
+    font-size: 35px;
+  }
+  .subscribe-form {
+    column-gap: 10px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  .subscribe-form__input {
+    font-size: 20px;
+  }
+
+  .subscribe-form__btn {
+    padding: 20px 35px;
+    width: 200px;
+    height: 100px;
+    border-radius: 18px;
+    font-size: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+  }
+
+  .nav--footer {
+    justify-content: center;
+  }
+  .nav__login--footer {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .customers__row {
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
+  .customers__img img {
+    max-width: 100%;
+  }
+  
+  .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+  .subscribe-form__btn {
+    padding: 20px 35px;
+    width: 200px;
+    height: 65px;
+    border-radius: 18px;
+    font-size: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+  }
+  .subscribe-form__input {
+    background: rgba(141, 135, 135, 0.096);
+    /* font-size: 24px; */
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  /* footer */
+  .nav--footer {
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
 }
 
 @media (max-width: 460px) {
+  .customers__img img {
+    max-width: 100%;
+  }
   .nav--mobile .nav__toggle {
     position: fixed;
     top: 20px;
@@ -789,5 +958,14 @@ body {
   .nav--mobile .nav__list,
   .nav--mobile .nav__login {
     row-gap: 20px;
+  }
+  .nav__list--footer {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .slider__btn--next {
+    right: -40px;
   }
 }

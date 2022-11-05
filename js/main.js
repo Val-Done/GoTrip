@@ -4,26 +4,20 @@ const owl = $(".owl-carousel");
 owl.owlCarousel({
   center: true,
   loop: true,
-  margin: 30,
-  startPosition: 1,
-  items: 3,
+  margin: 20,
+  startPosition: 0,
+  items: 1,
 
   responsive: {
     // breakpoint from 0 up
-    650: {
+
+    640: {
       startPosition: 1,
       items: 3,
-    },
-    // breakpoint from 480 up
-    850: {
-      startPosition: 1,
-      items: 2,
-    },
-    // breakpoint from 768 up
-    1000: {
-      margin: 20,
+      margin: 10,
     },
     1200: {
+      items: 3,
       margin: 30,
     },
   },
